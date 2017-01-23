@@ -37,7 +37,7 @@
 
 ////Dialog Style Start
 #undef deformacjeFrm_STYLE
-#define deformacjeFrm_STYLE wxCAPTION | wxRESIZE_BORDER | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxCLOSE_BOX
+#define deformacjeFrm_STYLE wxCAPTION | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
 class Matrix4;
@@ -57,7 +57,7 @@ class deformacjeFrm : public wxFrame
 		Matrix4 To2D();
 		
 	public:
-		deformacjeFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("deformacje"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = deformacjeFrm_STYLE|wxRESIZE_BORDER);
+		deformacjeFrm(wxWindow *parent, wxWindowID id = 1, const wxString &title = wxT("deformacje"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = deformacjeFrm_STYLE);
 		virtual ~deformacjeFrm();
 		void WxButton3Click(wxCommandEvent& event);
 		void WxEdit1Enter(wxCommandEvent& event);
@@ -163,6 +163,7 @@ class deformacjeFrm : public wxFrame
 		void CreateGUIControls();
 		wxImage img;
 		wxImage Img_Cpy;
+		wxImage Img_Org;
 		wxClientDC *dc;
 		int *xPoint;
 		int *yPoint; 
@@ -170,6 +171,7 @@ class deformacjeFrm : public wxFrame
 		int *yPointB; 
 		bool **tab;
 		int option;
+		int width, height;
 		
 };
 

@@ -1,7 +1,7 @@
 # Project: deformacje
 # Compiler: Default VC2008 compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 22.01.17 18:25
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 23.01.17 12:44
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
